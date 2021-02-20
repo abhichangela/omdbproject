@@ -22,6 +22,13 @@ export class AppComponent {
     this._service.getAPI(data).subscribe((posRes)=>{
       this.result = posRes;
       this.extra = this.result.Response;
+      if(this.extra == "True"){
+      this.displayMovie = true;
+      this.NoResponse = false;
+    }else if(this.extra == "False"){
+      this.NoResponse = true;
+      this.displayMovie = false;
+    }
     },(errRes: HttpErrorResponse)=>{
       if(errRes.error instanceof Error){
         console.log("Client side Error");
@@ -29,13 +36,7 @@ export class AppComponent {
         console.log("Server side Error");
       }
     })    
-    if(this.extra == "True"){
-      this.displayMovie = true;
-      this.NoResponse = false;
-    }else if(this.extra == "False"){
-      this.NoResponse = true;
-      this.displayMovie = false;
-    }
+    
   }
   
 }
