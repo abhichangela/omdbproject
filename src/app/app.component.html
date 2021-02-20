@@ -1,0 +1,50 @@
+<div class="formfield">
+    <mat-form-field>
+        <mat-label>Search</mat-label>
+        <input matInput [(ngModel)]="searchText" name="searchText">
+    </mat-form-field> &nbsp;
+
+    <button mat-raised-button color="primary" 
+        (click)="SearchClick(searchText)">Search</button>
+
+</div>
+
+<div class="deck">
+    <div class="display" *ngIf="displayMovie">
+            <label>Title:</label> &nbsp;
+            <span> {{result.Title}}</span> <br/> <br/>
+            <label>Year:</label>
+            <span> {{result.Year}}</span> <br/> <br/>
+            <label>Released:</label>
+            <span> {{result.Released}}</span> <br/> <br/>
+            <label>Time Duration:</label>
+            <span> {{result.Runtime}}</span> <br/> <br/>
+            <label>Director:</label>
+            <span> {{result.Director}}</span> <br/> <br/>
+            <label>Writer:</label>
+            <span> {{result.Writer}}</span> <br/> <br/>
+            <label>Actors:</label>
+            <span> {{result.Actors}}</span> <br/> <br/>
+            <label>Language:</label>
+            <span> {{result.Language}}</span> <br/> <br/>
+            <label>Country:</label>
+            <span> {{result.Country}}</span> <br/> <br/>
+            <label>Awards:</label>
+            <span> {{result.Awards}}</span> <br/> <br/>
+            <label>imdbRating:</label>
+            <span> {{result.imdbRating}}</span> <br/> <br/>
+            <label>Type:</label>
+            <span> {{result.Type}}</span> <br/> <br/>
+            <label>BoxOffice:</label>
+            <span> {{result.BoxOffice}}</span> <br/> <br/>
+            <label>Response:</label>
+            <span> {{result.Response}}</span> <br/> <br/>
+    </div>
+
+    <div *ngIf="NoResponse" class="display">
+        <label>Error:</label>
+        <span>{{result.Error}}</span> <br/> <br/>
+        <label>Response</label>
+        <span>{{result.Response}}</span>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+label{
+    font-size: large;
+    background-color: black;
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.display{
+    border: 5px solid rgb(14, 8, 1);
+    padding: 2px;
+    background-color: rgb(101, 172, 238);
+    margin: 10px;
+    padding: 5px;
+    padding-top: 10px;
+    border-radius: 10px;
+}
+
+span{
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.formfield{
+    text-align: center;
+}
